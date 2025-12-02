@@ -1,0 +1,116 @@
+/* cor verde
+cor vermelha
+cor beje/branco
+cor dourado ?
+
+criar neve
+
+criar textura
+
+animação da carta a ser aberta
+animação do postal*/
+
+:root {
+  --green-color: #0d3e28;
+  --red-color: #490200;
+  --beige-color: #dcc099;
+  --light-beige-color: #f7e6d4;
+  --bright-green-color: #65722a;
+  --bright-red-color: #d51f2c;
+}
+
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  text-align: center;
+  /* font-family: */
+  /* font-size: use rem (ex. 1.125) (default is 1rem, so don't use it if it's 1rem) */
+  /* font-weight: */
+  font-style: normal;
+  /* color: */
+  /* line-height: use unit (ex. 1.5) use 1.5/1.6/1.7 */
+  background-color: var(--green-color);
+}
+
+a {
+  /* color: */
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+img {
+  display: block;
+  max-inline-size: 100%;
+}
+
+h1 {
+  font-family: "Mountains of Christmas", serif;
+  font-weight: 700;
+  color: var(--beige-color);
+  font-size: 5rem;
+}
+
+.post-card {
+  margin: 0 auto;
+  background-color: transparent;
+  width: 500px;
+  height: 300px;
+  perspective: 1000px;
+  position: relative;
+}
+
+.post-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 1s;
+  transform-style: preserve-3d;
+}
+
+.post-card:hover .post-card-inner {
+  transform: rotateY(180deg);
+}
+
+.post-card-front,
+.post-card-back {
+  position: absolute;
+  background-color: var(--light-beige-color);
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden; /* Safari */
+  backface-visibility: hidden;
+}
+.post-card-front {
+  text-align: center;
+}
+
+.post-card-back {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: rotateY(180deg);
+  cursor: pointer;
+  font-size: 2rem;
+  color: black;
+}
+
+.post-card-back::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  border-left: 250px solid transparent;
+  border-right: 250px solid transparent;
+  border-top: 150px solid rgb(208, 3, 3);
+  z-index: -1;
+}
+
+.hidden {
+  display: none;
+}

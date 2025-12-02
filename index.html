@@ -3,10 +3,40 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <link href="/styles.css" rel="stylesheet" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Mountains+of+Christmas:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <title>Christmas Project</title>
   </head>
   <body>
-    <p>Christmas Project</p>
+    <h1>Christmas Project</h1>
+    <form id="letter-form">
+      <!-- <label for="name">Enter your name</label> -->
+      <input
+        type="text"
+        name="name"
+        id="name-input"
+        placeholder="Your name here"
+      />
+      <button type="submit">Click me!</button>
+    </form>
+    <div class="post-card">
+      <div class="post-card-inner">
+        <div class="post-card-back">
+          <div class="envelope"></div>
+          <p>Something here</p>
+        </div>
+        <div class="post-card-front">
+          <p>Santa Mail</p>
+          <p id="letter-name">Name here</p>
+          <p id="letter-content">Letter content here</p>
+        </div>
+      </div>
+    </div>
+    <audio controls src="/assets/merry-christmas-instrumental.mp3"></audio>
+    <button>Volume Button</button>
     <script src="/script.js"></script>
   </body>
 </html>
